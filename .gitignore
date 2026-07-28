@@ -39,3 +39,4 @@ winegold.db
 # Editor
 .vscode/
 .idea/
+.chicken/autoreview-result.json
