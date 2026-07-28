@@ -1,0 +1,20 @@
+{
+  "base_branch": "main",
+  "diff_mode": "branch",
+  "max_diff_chars": 60000,
+  "model": "opencode/deepseek-v4-flash-free",
+  "provider": "opencode",
+  "commands": [
+    "git diff --check origin/main...HEAD",
+    "test -f Package.swift",
+    "test -x scripts/build-app.sh",
+    "test -x scripts/package-release.sh"
+  ],
+  "optional_commands": [],
+  "blocking_severities": [
+    "critical",
+    "high"
+  ],
+  "fail_on_command_error": true,
+  "report_path": ".chicken/autoreview-result.json"
+}
